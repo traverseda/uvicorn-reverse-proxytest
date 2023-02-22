@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+<script src="https://unpkg.com/htmx.org@1.8.5"></script>
+<script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
+
+{{url_for("ws")}}
+<div hx-ext="ws" ws-connect="{{url_for("ws")}}">
+	<div id="ws-value">Websocket not connected</div>
+</div>
+
+<hr>
+{{request.headers}}
