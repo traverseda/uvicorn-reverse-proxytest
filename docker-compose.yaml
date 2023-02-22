@@ -29,7 +29,7 @@ services:
     command: python app.py
     labels:
       #Force https for the raw test
-      caddy: https://quart.localhost
+      caddy: http://quart.localhost https://quart.localhost
       caddy.reverse_proxy: "{{upstreams 5000}}"
 
 
